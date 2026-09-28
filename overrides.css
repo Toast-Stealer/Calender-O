@@ -1,0 +1,9 @@
+.agenda-panel{padding-left:34px;padding-right:34px}
+.agenda-heading h2{font-size:32px}
+.agenda-list{background:#f7f8f4;border-radius:12px;padding:18px 16px;margin-top:24px;min-height:170px}
+.agenda-list .empty-state{font-size:14px;padding:22px 4px}
+.agenda-item{padding-bottom:18px}
+.agenda-panel>.secondary-button{font-size:13px;padding:14px;background:var(--green-dark);color:#fff;border-color:var(--green-dark)}
+@media(min-width:1051px){.app-shell{grid-template-columns:280px minmax(500px,1fr) 360px}}
+.brand{font-size:26px;letter-spacing:-.9px}.brand-mark{font-size:29px}.share-button{display:block;border:1px solid #b8cbbf;background:transparent;color:var(--green-dark);border-radius:10px;padding:10px 13px;font:600 12px Arial,sans-serif;cursor:pointer;white-space:nowrap}.share-button:hover{background:#fff}.modal select{display:block;width:100%;margin-top:7px;border:1px solid #dde4de;border-radius:8px;padding:12px;background:#fff;color:var(--ink);font:13px Arial,sans-serif}.upcoming{background:#f7f8f4;border:1px solid var(--line);border-radius:12px;padding:25px 20px 20px;margin-top:35px}.upcoming .eyebrow{font-size:11px;margin-bottom:20px}.upcoming-item{font-size:15px;line-height:1.35;padding:13px 0;margin:0;border-top:1px solid #e1e7e1}.upcoming-date{font-size:12px;min-width:48px}.read-only .day{cursor:pointer}.read-only .day:hover{background:#f4f8f4}.read-only .sidebar-footer{margin-top:auto}.read-only .upcoming{margin-top:35px}
+@media(max-width:700px){.top-actions{gap:6px}.share-button{font-size:11px;padding:9px 10px}.brand{font-size:23px}.brand-mark{font-size:26px}}

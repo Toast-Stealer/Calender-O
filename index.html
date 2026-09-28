@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8f4" />
+  <title>Daymark — Keep life in view</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="overrides.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">✦</span><span>daymark</span></div>
+      <p class="eyebrow">Your month, at a glance</p>
+      <h1>Make room for<br /><em>what matters.</em></h1>
+      <p class="intro">A simple place to remember where you need to be and what you need to do.</p>
+      <button class="primary-button" id="addEventButton"><span>＋</span> Add a reminder</button>
+      <div class="sidebar-note"><span class="note-icon">✦</span><p>Small steps, clear days.<br /><strong>You've got this.</strong></p></div>
+      <div class="sidebar-footer"><span class="status-dot"></span> Your reminders stay on this device</div>
+    </aside>
+
+    <section class="calendar-area">
+      <header class="topbar">
+        <div><p class="eyebrow">Calendar</p><h2 id="monthTitle">September 2026</h2></div>
+        <div class="top-actions"><button class="share-button" id="shareButton">↗ Share URL</button><button class="today-button" id="todayButton">Today</button><button class="icon-button" id="openFromHeader" aria-label="Add reminder">＋</button></div>
+      </header>
+
+      <div class="calendar-toolbar"><button class="nav-button" id="prevMonth" aria-label="Previous month">‹</button><button class="nav-button" id="nextMonth" aria-label="Next month">›</button><span class="toolbar-hint">Select a day to see reminders</span></div>
+      <div class="calendar-card">
+        <div class="weekday-row"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </div>
+    </section>
+
+    <aside class="agenda-panel">
+      <div class="agenda-heading"><div><p class="eyebrow">Your day</p><h2 id="selectedDateTitle">Today</h2></div><span class="date-badge" id="selectedDayNumber">27</span></div>
+      <div id="agendaList" class="agenda-list"></div>
+      <button class="secondary-button" id="addAgendaEvent">＋ Add something</button>
+      <div class="upcoming"><p class="eyebrow">Coming up</p><div id="upcomingList"></div></div>
+    </aside>
+  </main>
+
+  <div class="modal-backdrop" id="modal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close-button" id="closeModal" aria-label="Close">×</button><p class="eyebrow">New reminder</p><h2 id="modalTitle">What should we remember?</h2><form id="eventForm"><label>Reminder<input id="eventTitle" required maxlength="60" placeholder="e.g. Pick up dry cleaning" /></label><div class="form-row"><label>Date<input id="eventDate" type="date" required /></label><label>Time<input id="eventTime" type="time" /></label></div><label>Place <span class="optional">(optional)</span><input id="eventPlace" maxlength="60" placeholder="e.g. Main Street" /></label><label>When shared<select id="eventVisibility"><option value="show">Show details</option><option value="disguise">Disguise as “Personal”</option><option value="hide">Hide this reminder</option></select></label><div class="form-actions"><button type="button" class="cancel-button" id="cancelModal">Cancel</button><button class="primary-button" type="submit">Save reminder</button></div></form></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
